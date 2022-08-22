@@ -6,15 +6,39 @@
 //
 
 import SwiftUI
+import SafariServices
 
 struct TrailerView: View {
+    let movie: Movie
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            SafariView(movie: movie, safariVC: SFSafariViewController(url: URL(string: movie.trailerLink)!))
+        }
     }
 }
 
-struct TrailerView_Previews: PreviewProvider {
+struct TrailerView_Preview: PreviewProvider {
     static var previews: some View {
-        TrailerView()
+        TrailerView(movie: moviesData.first!)
+    }
+}
+
+struct SafariView: UIViewControllerRepresentable {
+    let movie: Movie
+    let safariVC: SFSafariViewController
+    
+    func makeUIViewController(context: Context) -> SFSafariViewController {
+        let safariVC = SFSafariViewController(url: URL(string: movie.trailerLink)!)
+        return safariVC
+    }
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: Context) {
+        uiViewController.dismissButtonStyle = .close
+    }
+}
+
+struct SafariView_Preview: PreviewProvider {
+    static var previews: some View {
+        SafariView(movie: moviesData.first!, safariVC: SFSafariViewController.init(url: URL(string: moviesData.first!.trailerLink)!))
     }
 }
