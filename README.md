@@ -1,6 +1,6 @@
-  - [ ] How to load JSON data from a resource file
-  - [ ] How to work with ForEach, ActionSheet, Image and Shapes like Rectangle
-  - [ ] How to work with UI components like ScrollView , TabView, VStack, HStack, ZStack, NavigationLink, Button, etc
-  - [ ] How to work with Property Observers like State, Binding, etc
-  - [ ] How to work with UIKit’s ViewControllers in SwiftUI using UIViewRepresentable and UIViewControllerRepresentable
-- [ ] How to work with SFSafariViewController and UIPageViewController
+  - [x] How to load JSON data from a resource file
+  - [x] How to work with ForEach, ActionSheet, Image and Shapes like Rectangle
+  - [x] How to work with UI components like ScrollView , TabView, VStack, HStack, ZStack, NavigationLink, Button, etc
+  - [x] How to work with Property Observers like State, Binding, etc
+  - [x] How to work with UIKit’s ViewControllers in SwiftUI using UIViewRepresentable and UIViewControllerRepresentable
+- [x] How to work with SFSafariViewController and UIPageViewController
